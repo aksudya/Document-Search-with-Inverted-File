@@ -1,0 +1,176 @@
+# depslib dependency file v1.0
+1570515662 source:/home/wlzhao/src/cpp/bow/abstractretriever.cpp
+	"abstractretriever.h"
+	"scriptparser.h"
+	"iodelegator.h"
+	"cleaner.h"
+	"vstring.h"
+	<cstdio>
+
+1570499959 /home/wlzhao/src/cpp/bow/abstractretriever.h
+	"indexmeta.h"
+	"invtitem.h"
+	<unordered_map>
+	<cstring>
+	<string>
+	<vector>
+	<list>
+	<map>
+
+1569733473 /home/wlzhao/src/cpp/bow/indexmeta.h
+
+1570435406 /home/wlzhao/src/cpp/bow/invtitem.h
+	<iostream>
+	<cassert>
+
+1488894593 /home/wlzhao/src/cpp/bow/scriptparser.h
+	<string>
+	<vector>
+	<list>
+	<map>
+
+1570432751 /home/wlzhao/src/cpp/bow/iodelegator.h
+	<unordered_map>
+	<fstream>
+	<vector>
+	<string>
+	<list>
+	<map>
+	<set>
+
+1570515720 /home/wlzhao/src/cpp/bow/cleaner.h
+	"invtitem.h"
+	"indexmeta.h"
+	<vector>
+	<list>
+	<map>
+
+1431657468 /home/wlzhao/src/cpp/bow/vstring.h
+	<iostream>
+	<string>
+	<vector>
+	<list>
+	<set>
+
+1570515296 source:/home/wlzhao/src/cpp/bow/bowretriever.cpp
+	<sys/types.h>
+	<dirent.h>
+	<cstring>
+	<cassert>
+	<cstdio>
+	<ctime>
+	<cmath>
+	<list>
+	"scriptparser.h"
+	"invtflloader.h"
+	"bowretriever.h"
+	"iodelegator.h"
+	"indexmeta.h"
+	"vstring.h"
+	"cleaner.h"
+	"timer.h"
+
+1570435410 /home/wlzhao/src/cpp/bow/invtflloader.h
+	"invtitem.h"
+	<map>
+
+1570497289 /home/wlzhao/src/cpp/bow/bowretriever.h
+	"abstractretriever.h"
+	"iodelegator.h"
+	"invtitem.h"
+	<vector>
+	<list>
+
+1431657468 /home/wlzhao/src/cpp/bow/timer.h
+	<ctime>
+
+1434354425 /home/wlzhao/src/cpp/bow/vmath.h
+	<fstream>
+	<vector>
+	<set>
+
+1570499086 source:/home/wlzhao/src/cpp/bow/cleaner.cpp
+	"cleaner.h"
+	<cassert>
+
+1570500336 source:/home/wlzhao/src/cpp/bow/iodelegator.cpp
+	"iodelegator.h"
+	"scriptparser.h"
+	"cleaner.h"
+	"vstring.h"
+	<iostream>
+	<cassert>
+	<cstring>
+	<cstdlib>
+	<iomanip>
+	<cstdio>
+	<cmath>
+	<map>
+
+1570515761 source:/home/wlzhao/src/cpp/bow/main.cpp
+	<iostream>
+	"bowretriever.h"
+	"iodelegator.h"
+	"convert.h"
+
+1570500083 source:/home/wlzhao/src/cpp/bow/scriptparser.cpp
+	"scriptparser.h"
+	"vstring.h"
+	<iostream>
+	<fstream>
+	<cstring>
+	<cstdlib>
+	<cassert>
+	<list>
+
+1431657468 source:/home/wlzhao/src/cpp/bow/timer.cpp
+	"timer.h"
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1434354390 source:/home/wlzhao/src/cpp/bow/vmath.cpp
+	"vmath.h"
+	<assert.h>
+	<string.h>
+	<iostream>
+	<stdlib.h>
+	<fstream>
+	<math.h>
+
+1431657468 source:/home/wlzhao/src/cpp/bow/vstring.cpp
+	<sys/types.h>
+	<dirent.h>
+	<iostream>
+	<cstdlib>
+	<cassert>
+	<fstream>
+	<cstring>
+	<vector>
+	<cstdio>
+	<cmath>
+	<list>
+	"vstring.h"
+
+1570505247 source:/home/wlzhao/src/cpp/bow/invtflloader.cpp
+	"invtflloader.h"
+	"scriptparser.h"
+	"iodelegator.h"
+	"cleaner.h"
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<cstring>
+	<cstdio>
+	<cmath>
+
+1570515497 source:/home/wlzhao/src/cpp/bow/convert.cpp
+	"convert.h"
+	<iostream>
+	<fstream>
+	<ostream>
+	<cmath>
+	<map>
+
+1570436764 /home/wlzhao/src/cpp/bow/convert.h
+
