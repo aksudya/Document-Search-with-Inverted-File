@@ -21,7 +21,7 @@ void test()
 
 int main()
 {
-    //test();
-	cout << "asddaadasd";
+    test();
+	
     return 0;
 }

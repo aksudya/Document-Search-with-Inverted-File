@@ -38,7 +38,7 @@ unsigned long InvtFLLoader::loadInvtFL(HdrInvtBlock *invtTable, const char *bowF
 
     while(!instrm->eof())
     {
-        //filling your codes here
+        
     }
     instrm->close();
     delete instrm;

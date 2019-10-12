@@ -115,9 +115,9 @@ BoWRetriever::~BoWRetriever()
 
 void BoWRetriever::test()
 {
-    const char *conf  = "/home/wlzhao/lectures/mir/project1/code/etc/srch.conf";
-    const char *dstFn = "/home/wlzhao/lectures/mir/project1/dataset/bow_rslt1.txt";
-    const char *qryFn = "/home/wlzhao/lectures/mir/project1/dataset/query1.mat";
+    const char *conf  = "/root/projects/Project3/etc/srch.conf";
+    const char *dstFn = "/root/projects/dataset/bow_rslt1.txt";
+    const char *qryFn = "/root/projects/dataset/query1.mat";
 
     BoWRetriever *bowsrch = new BoWRetriever(conf);
     bowsrch->runSrch(qryFn, dstFn);

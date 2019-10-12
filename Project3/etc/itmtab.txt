@@ -1,5 +1,5 @@
 <item>
-doctab=/home/wlzhao/lectures/mir/project1/dataset/new3_labels.txt
-bowtab=/home/wlzhao/lectures/mir/project1/dataset/new3_nw.mat
-wghtab=/home/wlzhao/lectures/mir/project1/dataset/new3_wgh.txt
+doctab=/root/projects/dataset/new3_labels.txt
+bowtab=/root/projects/dataset/new3_nw.mat
+wghtab=/root/projects/dataset/new3_wgh.txt
 </item>

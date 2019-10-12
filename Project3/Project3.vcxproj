@@ -61,7 +61,11 @@
     <ClInclude Include="vstring.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="etc\srch.conf" />
     <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="etc\itmtab.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0b7895cc-4834-4a6b-be37-73f522db8cc0}</ProjectGuid>

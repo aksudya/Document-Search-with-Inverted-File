@@ -22,7 +22,7 @@ class InvtUnit
 {
 public:
     unsigned int Id;
-    float tf;
+	float tf;
 } __attribute__((__packed__));  ///all the members of the struct are packed without the aligned padding
 
 /***************block definition region*******************/
