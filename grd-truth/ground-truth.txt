@@ -1,0 +1,11 @@
+qry1 43
+qry2 67
+qry3 86
+qry4 92
+qry5 107
+qry6 113
+qry7 126
+qry8 161
+qry9 169
+qry10 214
+
