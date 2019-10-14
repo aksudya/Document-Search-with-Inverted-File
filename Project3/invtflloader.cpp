@@ -35,10 +35,35 @@ unsigned long InvtFLLoader::loadInvtFL(HdrInvtBlock *invtTable, const char *bowF
     tmpID  = 1;
     trmNum = 0;
     (*instrm)>>nline; (*instrm)>>dim;
-
     while(!instrm->eof())
     {
-        
+	    for (int i = 0; i < nline; ++i)
+	    {
+			docID = i;
+			(*instrm) >> trmNum;
+			for (int j = 0; j < trmNum; ++j)
+			{
+				(*instrm) >> wId;
+				(*instrm) >> tf;
+				invtTable[wId].tnum++;
+				crntBlock = invtTable;
+				for (int k = 0; k < invtTable[wId].bIdx; ++k)
+				{
+					crntBlock = crntBlock->next;
+				}
+				if(invtTable[wId].tnum>BLK_SIZE * invtTable[wId].bIdx)
+				{
+					InvtBlock* tmpBlock = new InvtBlock(BLK_SIZE);
+					crntBlock->next = tmpBlock;
+					crntBlock = crntBlock->next;
+					invtTable[wId].bIdx++;
+				}
+				crntUnit = &crntBlock->block[crntBlock->uIdx];
+				crntUnit->Id = docID;
+				crntUnit->tf = tf;
+				crntBlock->uIdx++;
+			}
+	    }
     }
     instrm->close();
     delete instrm;
