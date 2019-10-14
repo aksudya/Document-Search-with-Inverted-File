@@ -46,7 +46,7 @@ unsigned long InvtFLLoader::loadInvtFL(HdrInvtBlock *invtTable, const char *bowF
 				(*instrm) >> wId;
 				(*instrm) >> tf;
 				invtTable[wId].tnum++;
-				crntBlock = invtTable;
+				crntBlock = &invtTable[wId];
 				for (int k = 0; k < invtTable[wId].bIdx; ++k)
 				{
 					crntBlock = crntBlock->next;
@@ -62,6 +62,7 @@ unsigned long InvtFLLoader::loadInvtFL(HdrInvtBlock *invtTable, const char *bowF
 				crntUnit->Id = docID;
 				crntUnit->tf = tf;
 				crntBlock->uIdx++;
+				tltNum++;
 			}
 	    }
     }

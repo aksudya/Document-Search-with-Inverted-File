@@ -60,8 +60,11 @@ BoWRetriever::BoWRetriever(const char *conf)
     ///cout<<crntMap["bowtab"]<<endl;
 
     cout<<"Loading BoWs as Inverted File ... \n";
+	Timer t;
+	t.start();
     loaded = InvtFLLoader::loadInvtFL(this->invertTable, crntMap["bowtab"]);
-    if(!loaded)
+	t.end(true);
+	if(!loaded)
     {
         exit(0);
     }
@@ -84,9 +87,12 @@ int BoWRetriever::bowSrch(map<unsigned int, unsigned int> bowVect, const unsigne
 
     memset(this->ranks, 0, sizeof(float)*docNum);
     ///filling your codes here
+    ///
+    ///
+    ///
 
     rankList->sort(IndexMeta::LGcomparer);
-    /**/
+    
 
     return true;
 }
