@@ -66,6 +66,7 @@ unsigned long InvtFLLoader::loadInvtFL(HdrInvtBlock *invtTable, const char *bowF
 				crntUnit->Id = docID;
 				crntUnit->tf = tf;
 				crntBlock->uIdx++;
+				//crntBlock->length++;
 				tltNum++;
 			}
 	    }

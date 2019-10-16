@@ -60,10 +60,10 @@ BoWRetriever::BoWRetriever(const char *conf)
     ///cout<<crntMap["bowtab"]<<endl;
 
     cout<<"Loading BoWs as Inverted File ... \n";
-	Timer t;
-	t.start();
+	//Timer t;
+	//t.start();
     loaded = InvtFLLoader::loadInvtFL(this->invertTable, crntMap["bowtab"]);
-	t.end(true);
+	//t.end(true);
 	if(!loaded)
     {
         exit(0);
@@ -86,10 +86,34 @@ int BoWRetriever::bowSrch(map<unsigned int, unsigned int> bowVect, const unsigne
     IndexMeta *crntMeta = NULL;
 
     memset(this->ranks, 0, sizeof(float)*docNum);
-    ///filling your codes here
-    ///
-    ///
-    ///
+
+	for(mit=bowVect.begin();mit!=bowVect.end();mit++)
+	{
+		qryWgh += mit->second * mit->second;
+		
+
+		wId = mit->first;
+		int blckNum=this->invertTable[wId].bIdx;
+		crntBlck = this->invertTable[wId].next;
+		for (int i = 0; i < blckNum; ++i)
+		{
+			for (int j = 0; j < crntBlck->uIdx; ++j)
+			{
+				crntUnit = &crntBlck->block[j];
+				this->ranks[crntUnit->Id] += crntUnit->tf * mit->second;
+			}
+			crntBlck = crntBlck->next;
+		}
+
+	}
+	qryWgh = sqrtf(qryWgh);
+    for (int i = 0; i < docNum; ++i)
+    {
+		refWgh = ranks[i] / (qryWgh * (*i2wMap)[i+1]);
+		crntMeta = new IndexMeta(i, refWgh);
+		crntMeta->pp = i+1;
+		rankList->push_back(crntMeta);
+    }
 
     rankList->sort(IndexMeta::LGcomparer);
     
@@ -123,10 +147,17 @@ void BoWRetriever::test()
 {
     const char *conf  = "/home/aksudya/projects/Project3/etc/srch.conf";
     const char *dstFn = "/home/aksudya/projects/dataset/bow_rslt1.txt";
-    const char *qryFn = "/home/aksudya/projects/dataset/query1.mat";
-
+    const char *qryFn = "/home/aksudya/projects/dataset/query.mat";
+	
     BoWRetriever *bowsrch = new BoWRetriever(conf);
-    bowsrch->runSrch(qryFn, dstFn);
+	/*Timer t;
+	t.start();*/
+
+	auto s = clock();
+	bowsrch->runSrch(qryFn, dstFn);
+	auto e = clock();
+	cout << (double)(e - s) / CLOCKS_PER_SEC<<endl;
+	/*t.end(true);*/
     delete bowsrch;
     return ;
 }

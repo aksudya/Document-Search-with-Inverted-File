@@ -1,5 +1,5 @@
 <item>
-doctab=/root/projects/dataset/new3_labels.txt
-bowtab=/root/projects/dataset/new3_nw.mat
-wghtab=/root/projects/dataset/new3_wgh.txt
+doctab=/home/aksudya/projects/dataset/new3_labels.txt
+bowtab=/home/aksudya/projects/dataset/new3_nw.mat
+wghtab=/home/aksudya/projects/dataset/new3_wgh.txt
 </item>
